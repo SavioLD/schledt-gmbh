@@ -13,7 +13,7 @@ orientiert, umgesetzt im eigenen Corporate Design (Luft-/Raumfahrt-Blau).
 - `index.html` – die komplette Seite (self-contained, keine Build-Schritte nötig)
 - `creatives/` – 6 fertige Meta-Ad-Motive (3 Stellen × 4:5 und 9:16 Story)
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
-- `bilder/` – hier Logo und Hero-Fotos ablegen (siehe `bilder/HIER-BILDER-ABLEGEN.txt`)
+- `bilder/` – Logo (`schledt-logo*.png`) und Hero-Fotos (`hero.jpg`, `cnc-dreher.jpg`, `zerspanungsmechaniker.jpg`, `cnc-einrichter.jpg`)
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
 ## Offene Stellen
@@ -60,13 +60,13 @@ Zum Aktivieren:
 
 Danach landet im Leadtable-Feld `lebenslauf` ein direkt öffenbarer Link.
 
-## Corporate Design anpassen
+## Corporate Design
 
-Das komplette Farbschema liegt als CSS-Variablen ganz oben in `index.html`
-(`:root { --brand … }`). Aktuell ist ein Luft-/Raumfahrt-Blau gesetzt
-(`--brand:#125a99`). Die Firmen-Website (alban-schledt.de) war beim Erstellen
-nicht abrufbar – falls exakte Hausfarben/Logo vorliegen, einfach die
-`--brand*`-Werte tauschen und das Logo in `bilder/` ablegen (siehe dort).
+Farbschema als CSS-Variablen ganz oben in `index.html` (`:root { --brand … }`).
+Das Blau (`--brand:#1c3fce`) ist am Firmenlogo ausgerichtet. Das Original-Logo
+liegt in `bilder/` (`schledt-logo.png` für helle, `schledt-logo-weiss.png` für
+dunkle Flächen) und wird automatisch in Header, Hero und Footer eingesetzt.
+Farben lassen sich jederzeit über die `--brand*`-Werte anpassen.
 
 ## Meta-Ad-Creatives
 
