@@ -1,0 +1,25 @@
+Hier gehören die Bilder für die Karriereseite hinein.
+================================================================
+
+1) LOGO (optional – ersetzt automatisch den Text-Schriftzug "ALBAN SCHLEDT")
+   Sobald eine dieser Dateien existiert, wird sie im Header, im Hero
+   und im Footer statt des Text-Logos angezeigt:
+
+   - schledt-logo.svg oder schledt-logo.png          (dunkel, für hellen Hintergrund)
+   - schledt-logo-weiss.svg oder schledt-logo-weiss.png  (weiß, für Hero & Footer)
+
+   Fehlt das Logo, bleibt der saubere Text-Schriftzug stehen – die Seite
+   funktioniert also auch ohne Logo-Datei.
+
+2) HERO-FOTOS (optional – ohne Foto bleibt der blaue Farbverlauf stehen)
+   Querformat, mind. ~1600 px breit. Motiv rechts platzieren – links liegt
+   die Textfläche. Erwartete Dateinamen:
+
+   - hero.jpg                    allgemeines Hero-Bild (Start ohne ?stelle=)
+   - cnc-dreher.jpg              bei ?stelle=cnc-dreher
+   - zerspanungsmechaniker.jpg   bei ?stelle=zerspanungsmechaniker
+   - cnc-einrichter.jpg          bei ?stelle=cnc-einrichter
+
+   Empfehlung: echte Werkstatt-/Team-Fotos aus Dieburg (CNC-Drehmaschine,
+   glänzende Alu-Präzisionsteile, Mitarbeiter mit Schutzbrille). Das steigert
+   die Bewerberqualität deutlich gegenüber dem reinen Farbverlauf.
