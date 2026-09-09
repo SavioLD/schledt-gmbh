@@ -28,16 +28,23 @@ Der Deeplink wählt die Stelle vor und startet direkt bei der Erfahrungs-Frage.
 
 ## Formular & Vorfilterung
 
-Dreistufiges, mobil- und conversionoptimiertes Formular (~60 Sek.):
+Mehrstufiges, mobil- und conversionoptimiertes Formular (~60–90 Sek.):
 
 1. **Stelle wählen**
-2. **Vorfilter/Screening:** Qualifikation & Erfahrung in der Metallbearbeitung
-3. **Kontaktdaten** (+ optionaler Lebenslauf-Upload)
+2. **Qualifikation** – Ausbildung / Erfahrung in der Metallbearbeitung
+3. **Erfahrung an CNC-Maschinen** – Jahre an der Dreh-/Zerspanungsmaschine
+4. **Zeichnungen & Messen** – Zeichnungen lesen und mit Messmitteln prüfen
+5. **Kontaktdaten** (+ optionaler Lebenslauf-Upload)
 
-Wer bei Schritt 2 „weder Ausbildung noch Erfahrung in der Metallbearbeitung“
-wählt, wird aussortiert (**kein Lead an Leadtable**) und sieht einen freundlichen
-Hinweis. Screening & Erfolg gelten nur für den aktuellen Besuch – ein
-Seiten-Neuladen startet frisch.
+Die drei Qualifikationsfragen (2–4) sind mit einem Punkte-Vorfilter hinterlegt:
+Jede Antwort trägt Punkte (`data-score` im HTML). Wer die Mindestpunktzahl
+(`MIN_SCORE`, Standard 2 von max. 6) **nicht** erreicht **oder** ein
+K.o.-Kriterium (`data-dq`, aktuell „weder Ausbildung noch Erfahrung in der
+Metallbearbeitung") wählt, wird nach der letzten Frage freundlich abgelehnt –
+es geht **kein Lead an Leadtable**. Wer „alles maximal schlecht" ausfüllt,
+kommt also nicht durch. Schwellwert und Punkte lassen sich oben im `<script>`
+von `index.html` anpassen. Screening & Erfolg gelten nur für den aktuellen
+Besuch – ein Seiten-Neuladen startet frisch.
 
 ## Bewerbungen (Leadtable)
 

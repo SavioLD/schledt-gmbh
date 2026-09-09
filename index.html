@@ -223,7 +223,7 @@ section[id],.form-card{scroll-margin-top:80px}
 .apply__contact a{color:var(--brand-dark);text-decoration:underline;white-space:nowrap}
 .form-card__head{padding:24px 32px 0}
 .progress{height:6px;background:var(--panel-2);border-radius:999px;overflow:hidden}
-.progress__bar{height:100%;width:33%;background:var(--brand);border-radius:999px;transition:width .35s ease}
+.progress__bar{height:100%;width:20%;background:var(--brand);border-radius:999px;transition:width .35s ease}
 .progress__label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-mute);margin-top:10px;font-weight:700}
 .form-card__body{padding:24px 32px 34px;min-height:360px;display:flex;flex-direction:column}
 @media(max-width:560px){.form-card__body,.form-card__head{padding-left:18px;padding-right:18px}}
@@ -532,7 +532,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
     <div class="form-card">
       <div class="form-card__head">
         <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
-        <div class="progress__label"><span id="stepLabel">Schritt 1 von 3</span><span>~60 Sek.</span></div>
+        <div class="progress__label"><span id="stepLabel">Schritt 1 von 5</span><span>~60 Sek.</span></div>
       </div>
 
       <form class="form-card__body" id="applyForm" novalidate>
@@ -549,21 +549,46 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
           </div>
         </div>
 
-        <!-- STEP 2 -->
+        <!-- STEP 2 · Qualifikation -->
         <div class="fstep" data-step="2">
-          <h3>Deine Erfahrung – unser Anspruch</h3>
-          <p class="hint">Bei Alban Schledt zählt Präzision. Sei einfach ehrlich.</p>
-          <p class="q">Was bringst du für die Stelle mit?<span class="req">*</span></p>
+          <h3>Deine Qualifikation</h3>
+          <p class="hint">Erzähl uns kurz von deinem Hintergrund – sei einfach ehrlich.</p>
+          <p class="q">Was bringst du mit?<span class="req">*</span></p>
           <div class="choice-grid" data-field="erfahrung">
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung (z. B. Zerspanungsmechaniker) + mehrjährige Erfahrung im CNC-Drehen" /><span class="key">A</span><span>Ausbildung im Metallbereich <small>+ mehrjährige Erfahrung im CNC-Drehen</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung im Metallbereich" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Metallbereich</span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Mehrjährige Erfahrung in der Metallbearbeitung / Zerspanung (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Erfahrung in der Metallbearbeitung <small>ohne passende Ausbildung</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Keine Ausbildung und keine Erfahrung in der Metallbearbeitung" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung in der Metallbearbeitung</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="2" value="Ausbildung im Metallbereich + mehrjährige Erfahrung im CNC-Drehen" /><span class="key">A</span><span>Ausbildung im Metallbereich <small>+ mehrjährige Erfahrung im CNC-Drehen</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="2" value="Abgeschlossene Ausbildung im Metallbereich" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Metallbereich</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="1" value="Mehrjährige Erfahrung in der Metallbearbeitung / Zerspanung (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Erfahrung in der Metallbearbeitung <small>ohne passende Ausbildung</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="0" data-dq="1" value="Weder Ausbildung noch Erfahrung in der Metallbearbeitung" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung in der Metallbearbeitung</span></label>
           </div>
         </div>
 
-        <!-- STEP 3 -->
+        <!-- STEP 3 · Erfahrung an der Maschine -->
         <div class="fstep" data-step="3">
+          <h3>Erfahrung an der Maschine</h3>
+          <p class="hint">Wie viel Zeit hast du schon an CNC-Dreh- oder Zerspanungsmaschinen verbracht?</p>
+          <p class="q">Deine Erfahrung an CNC-Maschinen?<span class="req">*</span></p>
+          <div class="choice-grid" data-field="cnc">
+            <label class="choice"><input type="radio" name="cnc" data-score="2" value="Mehr als 3 Jahre" /><span class="key">A</span><span>Mehr als 3 Jahre</span></label>
+            <label class="choice"><input type="radio" name="cnc" data-score="2" value="1 bis 3 Jahre" /><span class="key">B</span><span>1 bis 3 Jahre</span></label>
+            <label class="choice"><input type="radio" name="cnc" data-score="1" value="Erste Erfahrung / Praktikum" /><span class="key">C</span><span>Erste Erfahrung / Praktikum</span></label>
+            <label class="choice"><input type="radio" name="cnc" data-score="0" value="Noch keine Erfahrung an CNC-Maschinen" /><span class="key">D</span><span>Noch keine Erfahrung an CNC-Maschinen</span></label>
+          </div>
+        </div>
+
+        <!-- STEP 4 · Zeichnungen & Messen -->
+        <div class="fstep" data-step="4">
+          <h3>Zeichnungen &amp; Messen</h3>
+          <p class="hint">Im Alltag arbeitest du nach technischer Zeichnung und prüfst deine Teile selbst.</p>
+          <p class="q">Technische Zeichnungen lesen &amp; mit Messmitteln prüfen (Messschieber, Mikrometer)?<span class="req">*</span></p>
+          <div class="choice-grid" data-field="pruefung">
+            <label class="choice"><input type="radio" name="pruefung" data-score="2" value="Ja, sicher – mache ich regelmäßig" /><span class="key">A</span><span>Ja, sicher – mache ich regelmäßig</span></label>
+            <label class="choice"><input type="radio" name="pruefung" data-score="1" value="Grundkenntnisse – ich arbeite mich schnell ein" /><span class="key">B</span><span>Grundkenntnisse – ich arbeite mich schnell ein</span></label>
+            <label class="choice"><input type="radio" name="pruefung" data-score="0" value="Damit hatte ich bisher nichts zu tun" /><span class="key">C</span><span>Damit hatte ich bisher nichts zu tun</span></label>
+          </div>
+        </div>
+
+        <!-- STEP 5 · Kontakt -->
+        <div class="fstep" data-step="5">
           <h3>Du hast es fast geschafft</h3>
           <p class="hint">Hinterlasse kurz deine Kontaktdaten. Wir melden uns persönlich bei dir.</p>
           <div class="frow">
@@ -602,7 +627,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
         <div class="result" id="screenoutView">
           <div class="result__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
           <h3>Danke für dein Interesse</h3>
-          <p>Für diese Stelle setzen wir eine abgeschlossene Ausbildung oder einschlägige Erfahrung in der Metallbearbeitung voraus. Aktuell passt das leider noch nicht. Du bist überzeugt, dass du trotzdem zu uns passt? Dann schreib uns gerne direkt an <a href="mailto:info@alban-schledt.de">info@alban-schledt.de</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
+          <p>Vielen Dank, dass du dir die Zeit genommen hast. Nach deinen Angaben passt es für diese Stelle aktuell leider noch nicht ganz – für die Präzisionsfertigung in der Luft- und Raumfahrt brauchen wir etwas mehr Erfahrung in der Metallbearbeitung. Du bist überzeugt, dass du trotzdem zu uns passt? Dann schreib uns gerne direkt an <a href="mailto:info@alban-schledt.de">info@alban-schledt.de</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
         </div>
 
         <div class="fnav" id="formNav">
@@ -686,7 +711,12 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
   var UPLOAD_BUCKET = "bewerbungen";
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
-  var SCREEN_OUT    = ["Keine Ausbildung und keine Erfahrung in der Metallbearbeitung"];
+  /* Vorfilter: Jede Antwort der Qualifikationsfragen trägt Punkte (data-score).
+     Wer die Mindestpunktzahl nicht erreicht ODER ein K.o.-Kriterium (data-dq)
+     wählt, wird freundlich abgelehnt – es geht KEIN Lead an Leadtable.
+     MIN_SCORE bei Bedarf anpassen (max. erreichbare Punkte: 6). */
+  var MIN_SCORE     = 2;
+  var QUAL_FIELDS   = ["erfahrung","cnc","pruefung"];
 
   var ALIASES = {
     "cnc-dreher":"cnc-dreher","cncdreher":"cnc-dreher","dreher":"cnc-dreher","nc-dreher":"cnc-dreher","ncdreher":"cnc-dreher",
@@ -769,10 +799,18 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
     btnNext.disabled=!stepValid(current);
     errBox.classList.remove("is-visible");
   }
-  function isScreenedOut(){ return SCREEN_OUT.indexOf(selectedValue("erfahrung"))!==-1; }
+  function qualScore(){
+    var total=0, dq=false;
+    QUAL_FIELDS.forEach(function(n){
+      var c=form.querySelector('input[name="'+n+'"]:checked');
+      if(c){ total+=parseInt(c.getAttribute("data-score")||"0",10); if(c.getAttribute("data-dq")==="1") dq=true; }
+    });
+    return { total:total, dq:dq };
+  }
+  function isScreenedOut(){ var r=qualScore(); return r.dq || r.total < MIN_SCORE; }
   function next(){
     if (locked || !stepValid(current) || submitting) return;
-    if (current===2 && isScreenedOut()){ showScreenout(); return; }
+    if (current===TOTAL-1 && isScreenedOut()){ showScreenout(); return; }
     if (current===TOTAL){ submit(); return; }
     current++; render();
     var card=document.querySelector(".form-card");
@@ -868,7 +906,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7ddf6}
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
     return { vorname:val("vorname"), nachname:val("nachname"), email:val("email"), telefon:val("telefon"),
-             stelle:val("stelle"), erfahrung:val("erfahrung"), lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
+             stelle:val("stelle"), erfahrung:val("erfahrung"), cnc:val("cnc"), pruefung:val("pruefung"), lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage Alban Schledt", seite:location.href };
   }
   function submit(){
