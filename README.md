@@ -14,6 +14,7 @@ orientiert, umgesetzt im eigenen Corporate Design (Luft-/Raumfahrt-Blau).
 - `creatives/` – 6 fertige Meta-Ad-Motive (3 Stellen × 4:5 und 9:16 Story)
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
 - `bilder/` – Logo (`schledt-logo*.png`) und Hero-Fotos (`hero.jpg`, `cnc-dreher.jpg`, `zerspanungsmechaniker.jpg`, `cnc-einrichter.jpg`)
+- `social/` – Facebook Profil- (1000×1000) und Titelbild (1640×624), aufeinander abgestimmt
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
 ## Offene Stellen
